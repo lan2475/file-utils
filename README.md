@@ -1,13 +1,13 @@
-#file-utils  
-#####一个前端文件下载、预览、打印工具  
-##0.功能实现说明  
+# file-utils  
+##### 一个前端文件下载、预览、打印工具  
+## 0.功能实现说明  
   模拟iframe form提交的方式实现post方式下载文件  
-##1.前置条件  
+## 1.前置条件  
     <script src="fileUtils.js"></script>
     <script>
         var fileUtil = new fileUtils();
     </script>
-##2.方法示例  
+## 2.方法示例  
     <script>
         /**
          * 下载文件
