@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+</head>
+<script src="fileUtils.js"></script>
+<script>
+    let fileUtil = new fileUtils();
+
+    function download() {
+        fileUtil.download("/file/download",{name: "老王", age: 21, wife: ["丽丽", "珍珍", "艾艾"]});//下载
+    }
+
+    function print() {
+        fileUtil.print("/file/preview", {name: "老王", age: 21, wife: ["丽丽", "珍珍", "艾艾"]});//打印
+    }
+
+    function preview() {
+        fileUtil.preview("/file/preview", {name: "老王", age: 16, wife: ["丽丽", "珍珍", "艾艾"]}, document.getElementById("ifr"));//预览
+    }
+</script>
+<body>
+<fieldset>
+    <legend>预览用iframe</legend>
+    <iframe id="ifr" width="100%" height="500px"></iframe>
+</fieldset>
+
+<button onclick="download()">下载</button>
+<button onclick="print()">打印</button>
+<button onclick="preview()">预览</button>
+</body>
+</html>
